@@ -2,20 +2,23 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
 import { AppMaterialModule } from './app-material/app-material.module';
-import { StatusPipe } from "./pipes/status.pipe";
+import { IconPipe } from "./pipes/icon.pipe";
+import { IconColorPipe } from './pipes/icon-color.pipe';
 
 
 
 @NgModule({
   declarations: [
-    StatusPipe
+    IconPipe,
+    IconColorPipe
   ],
   imports: [
     AppMaterialModule,
     CommonModule
   ],
   exports: [
-    StatusPipe
+    IconPipe,
+    IconColorPipe
   ]
 })
 export class SharedModule { }

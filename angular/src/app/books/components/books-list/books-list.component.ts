@@ -24,7 +24,7 @@ export class BooksListComponent implements AfterViewInit{
       urlAmazon: '',
       status: 'readed',
       numPages: 371,
-      continuation: '',
+      continuation: 'to-be-continued',
     },
     {
       id: '2',
@@ -35,7 +35,7 @@ export class BooksListComponent implements AfterViewInit{
       urlAmazon: '',
       status: 'to-read',
       numPages: 371,
-      continuation: '',
+      continuation: 'complete',
     },
     {
       id: '3',
@@ -46,7 +46,7 @@ export class BooksListComponent implements AfterViewInit{
       urlAmazon: '',
       status: 'reading',
       numPages: 371,
-      continuation: '',
+      continuation: 'complete',
     },
     {
       id: '4',
@@ -57,7 +57,7 @@ export class BooksListComponent implements AfterViewInit{
       urlAmazon: '',
       status: 'readed',
       numPages: 371,
-      continuation: '',
+      continuation: 'complete',
     },
     {
       id: '5',
@@ -68,7 +68,7 @@ export class BooksListComponent implements AfterViewInit{
       urlAmazon: '',
       status: 'readed',
       numPages: 371,
-      continuation: '',
+      continuation: 'complete',
     },
     {
       id: '6',
@@ -79,7 +79,7 @@ export class BooksListComponent implements AfterViewInit{
       urlAmazon: '',
       status: 'readed',
       numPages: 371,
-      continuation: '',
+      continuation: 'complete',
     }
   ];
 

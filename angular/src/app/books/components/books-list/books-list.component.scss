@@ -1,0 +1,15 @@
+.status {
+  display: inline-flex;
+  align-items: center;
+  background-color: rgba(224, 224, 224, 0.2);
+  color: #333333;
+  padding: 4px 4px;
+  border-radius: 16px;
+  font-size: 13px;
+}
+
+
+.status span{
+  margin-left: 8px;
+  margin-right: 4px;
+}

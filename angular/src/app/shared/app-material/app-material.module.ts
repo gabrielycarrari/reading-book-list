@@ -6,6 +6,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import {MatChipsModule} from '@angular/material/chips';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatTableModule,
     MatSortModule,
     MatPaginatorModule,
-    MatIconModule
+    MatIconModule,
+    MatChipsModule
   ]
 })
 export class AppMaterialModule { }
