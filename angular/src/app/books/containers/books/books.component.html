@@ -1,8 +1,9 @@
 <mat-card>
   <mat-card-content>
-    <mat-toolbar color="secundary">Livros</mat-toolbar>
+
 
     <div class="column-flex mat-elevation-z8">
+      <mat-toolbar color="secundary">Livros</mat-toolbar>
       <!-- *ngIf="books$ | async as courses; else loading" -->
       <app-books-list></app-books-list>
       <ng-template #loading>
