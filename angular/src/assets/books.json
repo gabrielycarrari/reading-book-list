@@ -1,0 +1,68 @@
+[
+  {
+    "id": "1",
+    "title": "Com amor, Anne",
+    "autor": "AK Souza",
+    "synopsis": "Anne Cavalcanti é uma garota que sempre pode ter tudo o que desejava...",
+    "urlImage": "",
+    "urlAmazon": "",
+    "status": "readed",
+    "numPages": 371,
+    "continuation": "to-be-continued"
+  },
+  {
+    "id": "2",
+    "title": "ACom amor, Anne",
+    "autor": "AK Souza",
+    "synopsis": "Anne Cavalcanti é uma garota que sempre pode ter tudo o que desejava...",
+    "urlImage": "",
+    "urlAmazon": "",
+    "status": "to-read",
+    "numPages": 371,
+    "continuation": "concluided"
+  },
+  {
+    "id": "3",
+    "title": "BCom amor, Anne",
+    "autor": "AK Souza",
+    "synopsis": "Anne Cavalcanti é uma garota que sempre pode ter tudo o que desejava...",
+    "urlImage": "",
+    "urlAmazon": "",
+    "status": "reading",
+    "numPages": 371,
+    "continuation": "concluided"
+  },
+  {
+    "id": "4",
+    "title": "CCom amor, Anne",
+    "autor": "AK Souza",
+    "synopsis": "Anne Cavalcanti é uma garota que sempre pode ter tudo o que desejava...",
+    "urlImage": "",
+    "urlAmazon": "",
+    "status": "readed",
+    "numPages": 371,
+    "continuation": "concluided"
+  },
+  {
+    "id": "5",
+    "title": "DCom amor, Anne",
+    "autor": "AK Souza",
+    "synopsis": "Anne Cavalcanti é uma garota que sempre pode ter tudo o que desejava...",
+    "urlImage": "",
+    "urlAmazon": "",
+    "status": "readed",
+    "numPages": 371,
+    "continuation": "concluided"
+  },
+  {
+    "id": "6",
+    "title": "ECom amor, Anne",
+    "autor": "AK Souza",
+    "synopsis": "Anne Cavalcanti é uma garota que sempre pode ter tudo o que desejava...",
+    "urlImage": "",
+    "urlAmazon": "",
+    "status": "readed",
+    "numPages": 371,
+    "continuation": "concluided"
+  }
+]

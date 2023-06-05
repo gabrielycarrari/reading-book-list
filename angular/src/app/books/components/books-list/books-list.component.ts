@@ -1,5 +1,5 @@
 import { LiveAnnouncer } from '@angular/cdk/a11y';
-import { AfterViewInit, Component, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, Input, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort, Sort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
@@ -13,75 +13,9 @@ import { Book } from '../../model/book';
   styleUrls: ['./books-list.component.scss'],
 })
 export class BooksListComponent implements AfterViewInit{
-  displayedColumns = ['title', 'autor', 'status', 'numPages', 'continuation'];
-  books: Book[] = [
-    {
-      id: '1',
-      title: 'Com amor, Anne',
-      autor: 'AK Souza',
-      synopsis: 'Anne Cavalcanti é uma garota que sempre pode ter tudo o que desejava...',
-      urlImage: '',
-      urlAmazon: '',
-      status: 'readed',
-      numPages: 371,
-      continuation: 'to-be-continued',
-    },
-    {
-      id: '2',
-      title: 'ACom amor, Anne',
-      autor: 'AK Souza',
-      synopsis: 'Anne Cavalcanti é uma garota que sempre pode ter tudo o que desejava...',
-      urlImage: '',
-      urlAmazon: '',
-      status: 'to-read',
-      numPages: 371,
-      continuation: 'complete',
-    },
-    {
-      id: '3',
-      title: 'BCom amor, Anne',
-      autor: 'AK Souza',
-      synopsis: 'Anne Cavalcanti é uma garota que sempre pode ter tudo o que desejava...',
-      urlImage: '',
-      urlAmazon: '',
-      status: 'reading',
-      numPages: 371,
-      continuation: 'complete',
-    },
-    {
-      id: '4',
-      title: 'DCom amor, Anne',
-      autor: 'AK Souza',
-      synopsis: 'Anne Cavalcanti é uma garota que sempre pode ter tudo o que desejava...',
-      urlImage: '',
-      urlAmazon: '',
-      status: 'readed',
-      numPages: 371,
-      continuation: 'complete',
-    },
-    {
-      id: '5',
-      title: 'FCom amor, Anne',
-      autor: 'AK Souza',
-      synopsis: 'Anne Cavalcanti é uma garota que sempre pode ter tudo o que desejava...',
-      urlImage: '',
-      urlAmazon: '',
-      status: 'readed',
-      numPages: 371,
-      continuation: 'complete',
-    },
-    {
-      id: '6',
-      title: 'GCom amor, Anne',
-      autor: 'AK Souza',
-      synopsis: 'Anne Cavalcanti é uma garota que sempre pode ter tudo o que desejava...',
-      urlImage: '',
-      urlAmazon: '',
-      status: 'readed',
-      numPages: 371,
-      continuation: 'complete',
-    }
-  ];
+  @Input() books: Book[] = [];
+
+  readonly displayedColumns = ['title', 'autor', 'status', 'numPages', 'continuation'];
 
   dataSource = new MatTableDataSource<Book>(this.books);
 
@@ -90,6 +24,7 @@ export class BooksListComponent implements AfterViewInit{
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
   ngAfterViewInit() {
+    this.dataSource = new MatTableDataSource<Book>(this.books);
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
   }
@@ -108,5 +43,9 @@ export class BooksListComponent implements AfterViewInit{
     } else {
       this._liveAnnouncer.announce('Sorting cleared');
     }
+  }
+
+  onClick(book: Book) {
+    console.log("Clicou " + book.id);
   }
 }
