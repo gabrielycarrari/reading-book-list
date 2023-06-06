@@ -5,13 +5,14 @@ import { BooksRoutingModule } from './books-routing.module';
 import { AppMaterialModule } from '../shared/app-material/app-material.module';
 import { BooksListComponent } from './components/books-list/books-list.component';
 import { SharedModule } from "../shared/shared.module";
-
+import { BookFormComponent } from './containers/book-form/book-form.component';
 
 
 @NgModule({
     declarations: [
         BooksComponent,
-        BooksListComponent
+        BooksListComponent,
+        BookFormComponent
     ],
     imports: [
         CommonModule,

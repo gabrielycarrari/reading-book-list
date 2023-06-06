@@ -1,5 +1,5 @@
 import { LiveAnnouncer } from '@angular/cdk/a11y';
-import { AfterViewInit, Component, Input, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, EventEmitter, Input, Output, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort, Sort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
@@ -14,6 +14,7 @@ import { Book } from '../../model/book';
 })
 export class BooksListComponent implements AfterViewInit{
   @Input() books: Book[] = [];
+  @Output() click = new EventEmitter(false);
 
   readonly displayedColumns = ['title', 'autor', 'status', 'numPages', 'continuation'];
 
@@ -46,6 +47,7 @@ export class BooksListComponent implements AfterViewInit{
   }
 
   onClick(book: Book) {
-    console.log("Clicou " + book.id);
+    console.log(book);
+    this.click.emit(book);
   }
 }
