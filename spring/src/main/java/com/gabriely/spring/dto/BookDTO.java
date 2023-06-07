@@ -18,7 +18,7 @@ public record BookDTO(
         @Length(max = 100) String urlImage,
         String urlAmazon,
         @NotNull @Length(max = 8) @Pattern(regexp = "Readed|Reading|To-read") String status,
-        @NotNull @Length(max = 50) int numPages,
+        @NotNull int numPages,
         @NotNull @Length(max = 50) @Pattern(regexp = "Concluided|To-be-Continued") String continuation
         ) {
     

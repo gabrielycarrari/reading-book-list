@@ -14,7 +14,7 @@ export class BookResolver  {
 
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<Book> {
     if (route.params && route.params['id']) {
-      //return this.service.loadById(route.params['id']);
+      return this.service.loadById(route.params['id']);
     }
 
     return of({ id: '', title: '', autor: '', synopsis: '', urlImage: '', urlAmazon: '', status: '', numPages: 0, continuation: ''});

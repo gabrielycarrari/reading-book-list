@@ -1,0 +1,58 @@
+mat-card {
+  max-width: 60%;
+  margin: 2em auto;
+  text-align: center;
+}
+
+.image-preview {
+  float: left;
+}
+
+.image-preview img{
+  width: 147px;
+  height: 210px;
+  margin-left: 1em;
+}
+
+.col-12-width {
+  width: 100%;
+  margin-top: 1em;
+}
+
+.col-6-width {
+  width: 50%;
+  float: left;
+  margin-top: 1em;
+  margin-right: 1em;
+}
+
+.col-3-width {
+  width: 25%;
+  float: left;
+  margin-top: 1em;
+  margin-right: 1em;
+}
+
+.col-9-width {
+  width: 73%;
+  float: left;
+  margin-top: 1em;
+  margin-right: 1em;
+}
+
+.min-width {
+  width: 100%;
+  min-width: 150px;
+}
+
+mat-card-actions {
+  justify-content: end;
+  margin-bottom: 1em;
+}
+
+.btn {
+  width: 110px;
+  height: 40px;
+  margin-right: 1em;
+}
+

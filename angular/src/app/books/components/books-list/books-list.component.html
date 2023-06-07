@@ -18,7 +18,7 @@
 
       <td mat-cell *matCellDef="let book">{{ book.title }}</td>
       <td mat-footer-cell *matFooterCellDef>
-        Total Livros: {{ getTotalBooks() }}
+        Total: {{ getTotalBooks() }}
       </td>
     </ng-container>
 
@@ -54,7 +54,7 @@
     <ng-container matColumnDef="numPages">
       <th mat-header-cell *matHeaderCellDef>Nº Páginas</th>
       <td mat-cell *matCellDef="let book" class="numPages">{{ book.numPages }}</td>
-      <td mat-footer-cell *matFooterCellDef>{{ getTotalNumPages() }}</td>
+      <td mat-footer-cell *matFooterCellDef>Total: {{ getTotalNumPages() }}</td>
     </ng-container>
 
     <!-- continuation Column {{ book.continuation }} -->

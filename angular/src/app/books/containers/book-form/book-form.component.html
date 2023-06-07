@@ -1,1 +1,92 @@
-<p>book-form works!</p>
+<mat-card>
+  <mat-card-content>
+    <mat-toolbar color="secundary">
+      <span>Detalhes do Livro</span>
+    </mat-toolbar>
+
+    <form [formGroup]="form" class="min-width">
+      <mat-form-field class="col-12-width" appearance="outline">
+        <mat-label>Título</mat-label>
+        <input matInput formControlName="title" #title/>
+        <mat-hint align="end">{{ title.value.length }} / 100</mat-hint>
+        <mat-error *ngIf="form.get('title')?.invalid">{{
+          getErrorMessage("title")
+        }}</mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="col-9-width" appearance="outline">
+        <mat-label>Autor</mat-label>
+        <input matInput formControlName="autor" #autor/>
+        <mat-hint align="end">{{ autor.value.length }} / 50</mat-hint>
+        <mat-error *ngIf="form.get('autor')?.invalid">{{
+          getErrorMessage("autor")
+        }}</mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="col-3-width" appearance="outline" style="margin-top: 1em; margin-right: 0em;">
+        <mat-label>Nº Páginas</mat-label>
+        <input matInput formControlName="numPages" #numPages/>
+        <mat-error *ngIf="form.get('numPages')?.invalid">{{
+          getErrorMessage("numPages")
+        }}</mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="col-12-width " appearance="outline">
+        <mat-label>Sinopse</mat-label>
+        <textarea matInput formControlName="synopsis" #synopsis></textarea>
+        <mat-error *ngIf="form.get('synopsis')?.invalid">{{
+          getErrorMessage("synopsis")
+        }}</mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="col-6-width" appearance="outline">
+        <mat-label>Url da Capa</mat-label>
+        <input matInput formControlName="urlImage" #urlImage (input)="form.get('urlImage')?.setValue(urlImage.value)"/>
+        <mat-hint align="end">{{ urlImage.value.length }} / 100</mat-hint>
+        <mat-error *ngIf="form.get('urlImage')?.invalid">{{
+          getErrorMessage("urlImage")
+        }}</mat-error>
+      </mat-form-field>
+
+      <div class="image-preview">
+        <img mat-card-image [src]="form.get('urlImage')?.value" alt=" ">
+      </div>
+
+      <mat-form-field class="col-9-width " appearance="outline">
+        <mat-label>Link Amazon</mat-label>
+        <input matInput formControlName="urlAmazon" #urlAmazon/>
+      </mat-form-field>
+
+      <mat-form-field class="col-3-width" appearance="outline">
+        <mat-label>Status</mat-label>
+        <mat-select formControlName="status">
+          <mat-option value="reading">Reading</mat-option>
+          <mat-option value="to-read">To Read</mat-option>
+          <mat-option value="readed" selected>Readed</mat-option>
+        </mat-select>
+        <mat-error *ngIf="form.get('status')?.invalid">{{
+          getErrorMessage("status")
+        }}</mat-error>
+      </mat-form-field>
+
+
+      <mat-form-field class="col-3-width" appearance="outline">
+        <mat-label>Continuação</mat-label>
+        <mat-select formControlName="continuation">
+          <mat-option value="concluided" selected>Concluided</mat-option>
+          <mat-option value="to-be-continued">To be Continued</mat-option>
+        </mat-select>
+        <mat-error *ngIf="form.get('continuation')?.invalid">{{
+          getErrorMessage("continuation")
+        }}</mat-error>
+      </mat-form-field>
+
+    </form>
+  </mat-card-content>
+
+  <mat-card-actions>
+    <button mat-raised-button color="primary" (click)="onSubimit()" class="btn">Salvar</button>
+    <button mat-raised-button (click)="onCancel()" class="btn">Cancelar</button>
+  </mat-card-actions>
+
+</mat-card>
