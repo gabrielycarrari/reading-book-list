@@ -1,9 +1,13 @@
 <mat-card>
   <mat-card-content>
-
-
     <div class="column-flex mat-elevation-z8">
-      <mat-toolbar color="secundary">Livros</mat-toolbar>
+      <mat-toolbar class="" color="secundary">Livros
+        <div>
+          <button mat-mini-fab color="primary" (click)="onAdd()">
+            <mat-icon>add</mat-icon>
+          </button>
+        </div>
+      </mat-toolbar>
       <app-books-list
         *ngIf="books$ | async as books; else loading"
         [books]= "books"

@@ -22,8 +22,11 @@ export class BooksComponent implements OnInit{
 
   ngOnInit(): void { }
 
+  onAdd() {
+    this.router.navigate(['new'], {relativeTo: this.route});
+  }
+
   onClick(book: Book) {
-    console.log(book);
     this.router.navigate(['edit', book.id], {relativeTo: this.route});
   }
 }

@@ -51,8 +51,8 @@ public class BookMapper {
             return null;
         }
         return switch (value) {
-            case "Concluided" -> Continuation.CONCLUIDED;
-            case "To-be-Continued" -> Continuation.TO_BE_CONTINUED;
+            case "concluided" -> Continuation.CONCLUIDED;
+            case "to-be-continued" -> Continuation.TO_BE_CONTINUED;
             default -> throw new IllegalArgumentException("Continuação inválida: " + value);
         };
     }
@@ -62,9 +62,9 @@ public class BookMapper {
             return null;
         }
         return switch (value) {
-            case "Readed" -> Status.READED;
-            case "Reading" -> Status.READING;
-            case "To-read" -> Status.TO_READ;
+            case "readed" -> Status.READED;
+            case "reading" -> Status.READING;
+            case "to-read" -> Status.TO_READ;
             default -> throw new IllegalArgumentException("Status inválido: " + value);
         };
     }
