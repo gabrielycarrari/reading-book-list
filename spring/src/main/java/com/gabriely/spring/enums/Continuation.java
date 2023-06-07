@@ -1,7 +1,7 @@
 package com.gabriely.spring.enums;
 
 public enum Continuation {
-    CONCLUIDED("Concluided"), TO_BE_CONTINUED("To-be-Continued");
+    CONCLUIDED("concluided"), TO_BE_CONTINUED("to-be-continued");
     
     private String value;
 

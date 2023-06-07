@@ -9,7 +9,7 @@ import { delay, first } from 'rxjs';
 })
 export class BooksService {
 
-  private readonly API = '/assets/books.json'
+  private readonly API = 'api/books'
   constructor(private httpClient: HttpClient) { }
 
   list () {

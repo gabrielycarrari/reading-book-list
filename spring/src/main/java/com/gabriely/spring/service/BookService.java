@@ -8,7 +8,11 @@ import org.springframework.validation.annotation.Validated;
 
 import com.gabriely.spring.dto.BookDTO;
 import com.gabriely.spring.dto.mapper.BookMapper;
+import com.gabriely.spring.exception.RecordNotFoundException;
 import com.gabriely.spring.repository.BookRepository;
+
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Positive;
 
 
 @Validated  
@@ -29,5 +33,8 @@ public class BookService {
             .collect(Collectors.toList());
     }
 
-    
+    public BookDTO findById(@NotNull @Positive Long id) {
+        return bookRepository.findById(id).map(bookMapper::toDTO)
+                .orElseThrow(() -> new RecordNotFoundException(id));
+    }
 }

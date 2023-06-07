@@ -4,7 +4,7 @@ import { ResolveFn } from '@angular/router';
 import { bookResolver } from './book.resolver';
 
 describe('bookResolver', () => {
-  const executeResolver: ResolveFn<boolean> = (...resolverParameters) => 
+  const executeResolver: ResolveFn<boolean> = (...resolverParameters) =>
       TestBed.runInInjectionContext(() => bookResolver(...resolverParameters));
 
   beforeEach(() => {

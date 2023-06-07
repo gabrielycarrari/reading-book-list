@@ -1,7 +1,7 @@
 package com.gabriely.spring.enums;
 
 public enum Status {
-    READED("Readed"), READING("Reading"), TO_READ("To-read");
+    READED("readed"), READING("reading"), TO_READ("to-read");
 
     private String value;
 
